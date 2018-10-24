@@ -36,6 +36,24 @@ class Model {
 	String name;
 	String busName;
 	ModelSignal[] signals;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBusName() {
+		return busName;
+	}
+	public void setBusName(String busName) {
+		this.busName = busName;
+	}
+	public ModelSignal[] getSignals() {
+		return signals;
+	}
+	public void setSignals(ModelSignal[] signals) {
+		this.signals = signals;
+	}
 	public Model(String name, String busName, ModelSignal[] signals) {
 		super();
 		this.name = name;
@@ -48,6 +66,25 @@ class ModelSignal {
 	String genericName;
 	int bitPosition;
 	int bitSize;
+	
+	public String getGenericName() {
+		return genericName;
+	}
+	public void setGenericName(String genericName) {
+		this.genericName = genericName;
+	}
+	public int getBitPosition() {
+		return bitPosition;
+	}
+	public void setBitPosition(int bitPosition) {
+		this.bitPosition = bitPosition;
+	}
+	public int getBitSize() {
+		return bitSize;
+	}
+	public void setBitSize(int bitSize) {
+		this.bitSize = bitSize;
+	}
 	public ModelSignal(String genericName, int bitPosition, int bitSize) {
 		super();
 		this.genericName = genericName;
