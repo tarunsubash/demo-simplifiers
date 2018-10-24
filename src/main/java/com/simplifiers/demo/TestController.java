@@ -6,20 +6,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-
+	
 	@RequestMapping("hello")
-	public String hello() {
-		return "Hello world";
-	}
-	
-	
-	@GetMapping("get")
 	public Model get() {
 		ModelSignal modelSignal = new ModelSignal("Current_available_max", 16, 8);
 		ModelSignal modelSignal2 = new ModelSignal("Current_drawn_actl", 8, 8);
 		ModelSignal[] modelSignals = {modelSignal, modelSignal2};
 		Model model = new Model("Current_Data", "hs", modelSignals);
 		return model;
+	}
+	
+	@RequestMapping("someMoreHello")
+	public Model someMoreHello() {
+		ModelSignal modelSignal = new ModelSignal("Current_available_max", 16, 8);
+		ModelSignal modelSignal2 = new ModelSignal("Current_drawn_actl", 8, 8);
+		ModelSignal[] modelSignals = {modelSignal, modelSignal2};
+		Model model = new Model("Current_Data", "hs", modelSignals);
+		return model;
+		
 	}
 }
 
