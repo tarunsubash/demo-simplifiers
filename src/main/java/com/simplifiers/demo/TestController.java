@@ -25,6 +25,11 @@ public class TestController {
 		return model;
 		
 	}
+	
+	@RequestMapping("test")
+	public String test() {
+		return "Test";
+	}
 }
 
 class Model {
